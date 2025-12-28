@@ -1,0 +1,60 @@
+.navbar {
+  height: 60px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #202124;
+}
+
+.logo img {
+  width: 250px;
+  height: 50px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.right a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #1a73e8;
+}
+
+.signup {
+  padding: 6px 12px;
+  background: #1a73e8;
+  color: white !important;
+  border-radius: 4px;
+}
+
+.signup:hover {
+  background: #1669c1;
+}
+
+
+
+
+
