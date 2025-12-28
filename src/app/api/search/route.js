@@ -1,3 +1,6 @@
+export const runtime = "nodejs";
+
+
 import { duckDuckGoSearch } from "./providers/duckduckgo";
 
 // Change this later to "bing", "brave", "custom"
