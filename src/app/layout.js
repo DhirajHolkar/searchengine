@@ -5,6 +5,14 @@ import Navbar from "../components/Navbar";
 import { usePathname } from "next/navigation";
 
 
+export const metadata = {
+  title:"ProtonCave",
+  description:"search the web smarter",
+
+  icons:{
+    icon:"/protoncave-icon.png",
+  },
+};
 
 export default function RootLayout({ children }) {
 
