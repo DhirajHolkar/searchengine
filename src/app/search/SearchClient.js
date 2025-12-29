@@ -86,7 +86,7 @@ export default function SearchPage() {
           <a
           href={item.url}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="result-title-link"
           >
           <h3 className="result-title">{item.title}</h3>

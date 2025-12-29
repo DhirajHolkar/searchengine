@@ -17,7 +17,7 @@ export default function Contact() {
       <p>
         Email us at:
         <br />
-        <strong>support@yoursearch.com</strong>
+        protoncave@gmail.com
       </p>
     </div>
   );

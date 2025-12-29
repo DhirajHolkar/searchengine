@@ -10,7 +10,7 @@ export default function About() {
       <h1>About Us</h1>
 
       <p>
-        YourSearch is a simple and fast search engine created to help users find
+        ProtonCave is a simple and fast search engine created to help users find
         useful information quickly.
       </p>
 
