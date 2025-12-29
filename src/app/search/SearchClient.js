@@ -13,6 +13,9 @@ export default function SearchPage() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(true);
 
+
+
+
   useEffect(() => {
     if (!query) return;
 
@@ -25,6 +28,11 @@ export default function SearchPage() {
         setLoading(false);
       });
   }, [query]);
+
+
+
+
+
 
   return (
       <div className="search-page">
@@ -85,7 +93,8 @@ export default function SearchPage() {
           </a>
 
           {/* Row 3: snippet */}
-          <p className="result-snippet">{item.description}</p>
+          {/* <p className="result-snippet">{item.description}</p>/ */}
+          <p className="result-snippet">{item.snippet}</p>
 
           </div>
           ))}

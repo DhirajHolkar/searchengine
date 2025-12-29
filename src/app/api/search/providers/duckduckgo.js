@@ -5,6 +5,9 @@ export async function duckDuckGoSearch(query) {
     "https://duckduckgo.com/html/?q=" +
     encodeURIComponent(query);
 
+   
+
+
   const response = await fetch(searchUrl, {
     headers: {
       // Important: behave like a normal browser
@@ -25,8 +28,12 @@ export async function duckDuckGoSearch(query) {
    * <a class="result__snippet">Snippet</a>
    */
 
+
+
   const resultRegex =
     /<a[^>]*class="result__a"[^>]*href="([^"]+)"[^>]*>(.*?)<\/a>[\s\S]*?<a[^>]*class="result__snippet"[^>]*>(.*?)<\/a>/g;
+
+
 
   let match;
 
@@ -39,6 +46,8 @@ export async function duckDuckGoSearch(query) {
 
     const title = stripHtml(match[2]);
     const snippet = stripHtml(match[3]);
+
+    if (!realUrl.startsWith("http")) continue;
 
     const domain = new URL(realUrl).hostname;
 
@@ -73,6 +82,15 @@ function extractRealUrl(ddgUrl) {
     return ddgUrl;
   }
 }
+
+
+
+
+
+
+
+
+
 
 
 

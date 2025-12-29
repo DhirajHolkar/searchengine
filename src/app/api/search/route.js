@@ -1,10 +1,13 @@
 export const runtime = "nodejs";
 
 
-import { duckDuckGoSearch } from "./providers/duckduckgo";
+// import { duckDuckGoSearch } from "./providers/duckduckgo";
+import { searchApiSearch } from "./providers/searchapi";
+
 
 // Change this later to "bing", "brave", "custom"
-const ACTIVE_PROVIDER = "duckduckgo";
+// const ACTIVE_PROVIDER = "duckduckgo";
+const ACTIVE_PROVIDER = "searchapi";
 
 // Simple in-memory cache
 const cache = new Map();
@@ -40,17 +43,22 @@ export async function GET(request) {
       results = await duckDuckGoSearch(query);
       break;
 
-    // case "bing":
-    //   results = await bingSearch(query);
-    //   break;
+    case "bing":
+      results = await bingSearch(query);
+      break;
 
-    // case "brave":
-    //   results = await braveSearch(query);
-    //   break;
+    case "brave":
+      results = await braveSearch(query);
+      break;
 
-    // case "custom":
-    //   results = await customCrawlerSearch(query);
-    //   break;
+    case "searchapi":
+     results = await searchApiSearch(query);
+      break;
+
+
+    case "custom":
+      results = await customCrawlerSearch(query);
+      break;
 
     default:
       return Response.json(
@@ -70,3 +78,22 @@ export async function GET(request) {
     results,
   });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
